@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍅 Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🍅 Pomodoro Timer</h1>
+
+        <div class="status" id="status">作業時間</div>
+
+        <div class="timer" id="timer">25:00</div>
+
+        <div class="sessions">
+            完了セッション: <span id="sessions">0</span>
+        </div>
+
+        <div class="controls">
+            <button id="startBtn" class="btn btn-primary">▶ スタート</button>
+            <button id="resetBtn" class="btn btn-secondary">↺ リセット</button>
+            <button id="skipBtn" class="btn btn-secondary">⏭ スキップ</button>
+        </div>
+
+        <div class="settings">
+            <h3>設定（分）</h3>
+            <div class="settings-grid">
+                <div class="setting-item">
+                    <label for="workTime">作業時間</label>
+                    <input type="number" id="workTime" min="1" max="60" value="25">
+                </div>
+                <div class="setting-item">
+                    <label for="shortBreak">短い休憩</label>
+                    <input type="number" id="shortBreak" min="1" max="30" value="5">
+                </div>
+                <div class="setting-item">
+                    <label for="longBreak">長い休憩</label>
+                    <input type="number" id="longBreak" min="1" max="60" value="15">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <div class="modal-icon" id="modalIcon">✅</div>
+            <h2 id="modalTitle">完了</h2>
+            <p id="modalMessage">メッセージ</p>
+            <button class="btn btn-primary" id="modalBtn">OK</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
